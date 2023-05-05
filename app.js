@@ -28,7 +28,7 @@ agregarDato = (accion = false) => {
   const descripcion = forma.descripcion.value.toUpperCase();
   const valor = parseFloat(forma.querySelector(".agregar_valor").value);
 
-  if (descripcion !== "" && valor !== "") {
+  if (descripcion !== "" && valor !== "" && valor >0 && isNaN (valor)==false) {
     if (tipo === 'ingreso') {
       ingresos.push(new Ingreso(descripcion, valor));
     }else if (tipo === 'egreso'){
